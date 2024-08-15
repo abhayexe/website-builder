@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enhanced Drag and Drop Website Builder</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="toolbar">
+        <button id="deleteElement" style="display: none;">Delete Element</button>
+        <button onclick="addElement('text')">Add Text</button>
+        <button onclick="addElement('image')">Add Image</button>
+        <button onclick="addElement('shape')">Add Shape</button>
+        <input type="file" id="imageUpload" accept="image/*" style="display: none;">
+        <button onclick="document.getElementById('imageUpload').click()">Upload Image</button>
+        <button onclick="togglePreview()">👁️ Preview</button>
+    </div>
+    <div id="canvas"></div>
+    <div id="sidebar">
+        <h3>Element Properties</h3>
+        <div id="properties">
+            
+        </div>
+        <div id="additionalProperties">
+            <h4>Additional Properties</h4>
+            <label>Border Radius: <input type="text" id="borderRadius"></label>
+            <label>Box Shadow: <input type="text" id="boxShadow"></label>
+            <label>Background Gradient: <input type="text" id="backgroundGradient"></label>
+            <label>Border: <input type="text" id="border"></label>
+            <label>Opacity: <input type="range" id="opacity" min="0" max="1" step="0.1"></label>
+            <label>Blur: <input type="range" id="blur" min="0" max="10" step="0.1"></label>
+            <h4>Hover Properties</h4>
+            <label>Hover Color: <input type="color" id="hoverColor"></label>
+            <label>Hover Background: <input type="color" id="hoverBackground"></label>
+          </div>
+        <h3>Canvas Properties</h3>
+        <div id="canvasProperties">
+            <label>Background Color: 
+                <input type="color" id="canvasBackgroundColor" value="#ffffff">
+            </label>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
